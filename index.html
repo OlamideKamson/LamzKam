@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2b3342">
+<meta name="description" content="Product marketing and lifecycle strategy portfolio of Lami Kamson, based in Vancouver, BC.">
+<title>Lami Kamson | Product Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#2b3342;--fg:#f0f0ee;--mute:rgba(240,240,238,.7);--line:rgba(240,240,238,.28);--pad:64px}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{background:var(--bg);color:var(--fg);font-family:Archivo,"Helvetica Neue",Arial,sans-serif;font-weight:400;line-height:1.55}
+a{color:#f3f2f2;text-underline-offset:3px}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+ul{list-style:none}
+/* hero */
+#hero{position:relative;height:100vh;overflow:hidden;background:var(--bg)}
+#hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:translateZ(0);user-select:none;-webkit-user-drag:none;pointer-events:none}
+#gold{opacity:.1}
+#rev{opacity:0;transition:opacity .4s ease-out;will-change:opacity;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,transparent 100%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:110px 140px;mask-size:110px 140px;-webkit-mask-position:-9999px -9999px;mask-position:-9999px -9999px}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,32,.55) 0%,rgba(20,24,32,.12) 45%,rgba(20,24,32,.6) 100%);pointer-events:none}
+.ov{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;padding:44px var(--pad) 40px;pointer-events:none}
+.ov a{pointer-events:auto}
+.top{display:flex;justify-content:space-between;align-items:baseline;font-size:16px;font-weight:500;letter-spacing:.02em}
+.top .g{display:flex;gap:28px}.top .r{display:flex;gap:14px}
+.pill{border:1.5px solid var(--fg);border-radius:999px;padding:4px 20px;font-size:15px}
+h1{margin-top:40px;font-size:clamp(52px,7.4vw,104px);font-weight:500;letter-spacing:-.02em;line-height:.98}
+h1 .l2{display:inline-flex;align-items:center;gap:24px}
+.pl{width:.8em;height:.8em;line-height:1;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--fg);border-radius:50%}
+.pl span{font-size:.45em;font-weight:400}
+.bot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:48px}
+.bot .a{font-size:18px;font-weight:500;line-height:1.45}
+.bot .b{max-width:560px}
+.bot p{text-align:justify;font-size:15.5px;line-height:1.6;word-spacing:.15em}
+.meta{margin-top:20px;display:flex;justify-content:space-between;font-size:14px;letter-spacing:.02em}
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;padding:16px var(--pad);font-size:15px;font-weight:500}
+.nav ul{display:flex;gap:28px}
+/* sections */
+section{padding:112px var(--pad) 0;max-width:1440px;margin:auto}
+.hd{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;margin-bottom:56px}
+.hd small{font-size:15px;font-weight:500;color:var(--mute)}
+h2{font-size:clamp(34px,4.6vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.02;text-transform:lowercase}
+.hd p{margin-top:18px;max-width:52ch;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid var(--line);padding-top:28px}
+.stats b{display:block;font-size:clamp(40px,5.2vw,76px);font-weight:500;letter-spacing:-.02em;line-height:1}
+.stats span{font-size:14px;color:var(--mute)}
+.cs,.xp{display:grid;grid-template-columns:1fr 1.7fr 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
+.cs h3,.xp h3{font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.2;letter-spacing:-.01em}
+.cs p,.xp p{margin-top:12px;color:var(--mute);max-width:62ch}
+.cs .m span,.xp .m span{display:block;font-size:14px}
+.cs .m span:first-child,.xp .m span:first-child{font-weight:500;font-size:15px}
+.cs .m span+span{color:var(--mute);margin-top:6px}
+.k li{margin-bottom:14px}.k b{display:block;font-size:34px;font-weight:500;letter-spacing:-.02em;line-height:1.05}.k span{font-size:13.5px;color:var(--mute)}
+.xp{grid-template-columns:1fr 2.7fr}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 40px}
+.grid article{border-top:1px solid var(--line);padding-top:20px}
+.grid h3{font-size:20px;font-weight:500;margin-bottom:10px}
+.grid p{color:var(--mute);font-size:15px}
+.tg{margin-top:12px;font-size:13.5px}
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:88px}
+.tools h4{font-size:15px;font-weight:500;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.tools li{font-size:15px;color:var(--mute);padding:2px 0}
+#contact{padding-bottom:72px}
+#contact h2{font-size:clamp(40px,7vw,104px);max-width:14ch}
+.ct{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:40px;font-size:18px;font-weight:500}
+footer{max-width:1440px;margin:auto;padding:24px var(--pad) 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:14px;color:var(--mute)}
+@media (max-width:900px){:root{--pad:28px}.cs,.xp,.hd{grid-template-columns:1fr;gap:18px}.grid{grid-template-columns:1fr 1fr}.tools,.stats{grid-template-columns:1fr 1fr}.k{display:flex;gap:28px;flex-wrap:wrap}}
+@media (max-width:640px){.ov{padding:28px 22px 28px}.top .r,.top .g span:nth-child(2){display:none}.bot{flex-direction:column;align-items:flex-start;gap:16px}.bot .a{font-size:15px}.bot p{font-size:13.5px;line-height:1.5}.meta{margin-top:12px}.grid{grid-template-columns:1fr}.nav ul{gap:16px}.nav{font-size:14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#rev{transition:none}}
+</style>
+</head>
+<body>
+
+<header id="hero">
+  <img id="clean" alt="" draggable="false">
+  <img id="gold" alt="" draggable="false">
+  <img id="rev" alt="" draggable="false">
+  <div class="scrim"></div>
+  <div class="ov">
+    <div class="top">
+      <div class="g"><span id="hName"></span><span id="hTag"></span></div>
+      <span class="pill" id="hYear"></span>
+      <div class="r"><span>(</span><span id="hA"></span><span>/</span><span id="hB"></span><span>)</span></div>
+    </div>
+    <h1><span id="hL1"></span><br><span class="l2"><span class="pl"><span>+</span></span><span id="hL2"></span></span></h1>
+    <div class="bot">
+      <div class="a" id="hLoc"></div>
+      <div class="b"><p id="hBlurb"></p>
+        <div class="meta"><span id="hVol"></span><a href="#work">( scroll &darr; )</a></div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections">
+  <a href="#hero" id="nName"></a>
+  <ul><li><a href="#work">work</a></li><li><a href="#experience">experience</a></li><li><a href="#skills">skills</a></li><li><a href="#contact">contact</a></li></ul>
+</nav>
+
+<section id="work">
+  <div class="hd"><div><small>case studies</small></div><div><h2>work that moved the numbers</h2><p>Real briefs. Real constraints. Real results.</p></div></div>
+  <div class="stats" id="stats"></div>
+  <div id="cases"></div>
+</section>
+<section id="experience">
+  <div class="hd"><div><small>career</small></div><div><h2>where i've built</h2><p id="expIntro"></p></div></div>
+  <div id="jobs"></div>
+</section>
+<section id="skills">
+  <div class="hd"><div><small>capabilities</small></div><div><h2>what i bring</h2><p>From strategy through execution, strongest at the intersection of data, storytelling, and growth.</p></div></div>
+  <div class="grid" id="caps"></div>
+  <div class="tools" id="tools"></div>
+</section>
+<section id="contact">
+  <div class="hd"><div><small>let's talk</small></div><div></div></div>
+  <h2 id="cHead"></h2>
+  <p style="margin-top:24px;max-width:56ch;color:var(--mute)" id="cText"></p>
+  <div class="ct" id="cLinks"></div>
+</section>
+<footer><span id="fName"></span><a href="#hero">back to top &uarr;</a></footer>
+
+<script>
+fetch("content/site.json").then(r=>{if(!r.ok)throw 0;return r.json()}).then(C=>{
+
+const $=s=>document.querySelector(s);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const T=(s,v)=>{$(s).textContent=v};
+const ph=g=>'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice"><defs><pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30 0L60 30L30 60L0 30z" fill="none" stroke="#d4af37" stroke-width="2"/></pattern></defs><rect width="1600" height="1000" fill="${g?'#2a2210':'#1a2030'}"/>${g?'<rect width="1600" height="1000" fill="url(#p)"/>':''}<ellipse cx="800" cy="470" rx="190" ry="250" fill="${g?'#d4af37':'#3a4356'}"/><path d="M360 1000c0-260 190-330 440-330s440 70 440 330z" fill="${g?'#b8932b':'#2f3748'}"/></svg>`);
+const I=C.images,H=C.hero;
+$("#clean").src=I.clean||ph(0);$("#gold").src=I.gold||ph(1);$("#rev").src=I.gold||ph(1);
+T("#hName",C.name+"\u00ae");T("#nName",C.name+"\u00ae");T("#fName",C.name+"\u00ae \u00a92026");
+T("#hTag",H.tag);T("#hYear",C.year);T("#hA",H.right[0]);T("#hB",H.right[1]);
+T("#hL1",H.line1);T("#hL2",H.line2);T("#hBlurb",H.blurb);T("#hVol",H.vol);
+$("#hLoc").innerHTML=E(H.location).replace(/\n/g,"<br>");
+document.title=C.fullName+" | Product Marketing Portfolio";
+$("#stats").innerHTML=C.stats.map(s=>`<div><b>${E(s.value)}</b><span>${E(s.label)}</span></div>`).join("");
+$("#cases").innerHTML=C.cases.map(c=>`<article class="cs"><div class="m"><span>${E(c.co)}, ${E(c.yr)}</span><span>( ${E(c.tags)} )</span></div><div><h3>${E(c.title)}</h3><p>${E(c.text)}</p>${c.url?`<p><a href="${E(c.url)}">read case study</a></p>`:""}</div><ul class="k">${c.metrics.map(m=>`<li><b>${E(m.value)}</b><span>${E(m.label)}</span></li>`).join("")}</ul></article>`).join("");
+T("#expIntro",C.expIntro);
+$("#jobs").innerHTML=C.jobs.map(j=>`<article class="xp"><div class="m"><span>${E(j.dates)}</span></div><div><h3>${E(j.role)}</h3><p style="color:var(--fg);margin-top:6px">${E(j.company)}</p><p>${E(j.text)}</p></div></article>`).join("");
+$("#caps").innerHTML=C.caps.map(c=>`<article><h3>${E(c.title)}</h3><p>${E(c.text)}</p><div class="tg">( ${E(c.tags)} )</div></article>`).join("");
+$("#tools").innerHTML=C.tools.map(t=>`<div><h4>${E(t.group)}</h4><ul>${t.items.map(x=>`<li>${E(x)}</li>`).join("")}</ul></div>`).join("");
+const K=C.contact;T("#cHead",K.head);T("#cText",K.text);
+$("#cLinks").innerHTML=`<a href="mailto:${E(K.email)}">${E(K.email)}</a><a href="${E(K.linkedin)}" target="_blank" rel="noopener">linkedin</a><a href="tel:${E(K.phone.replace(/\s/g,""))}">${E(K.phone)}</a>`;
+
+/* cursor reveal: desktop only */
+if(matchMedia("(hover: hover) and (pointer: fine)").matches){
+  const hero=$("#hero"),rev=$("#rev");let tx=0,ty=0,cx=0,cy=0,on=false,raf=0;
+  const place=()=>{rev.style.webkitMaskPosition=rev.style.maskPosition=`${cx-55}px ${cy-70}px`};
+  const step=()=>{raf=0;const dx=tx-cx,dy=ty-cy;if(Math.abs(dx)<.3&&Math.abs(dy)<.3){cx=tx;cy=ty;place();return}cx+=dx*.22;cy+=dy*.22;place();raf=requestAnimationFrame(step)};
+  hero.addEventListener("mousemove",e=>{const r=hero.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;if(!on){on=true;cx=tx;cy=ty;place();rev.style.opacity=1}if(!raf)raf=requestAnimationFrame(step)});
+  hero.addEventListener("mouseleave",()=>{on=false;rev.style.opacity=0});
+}
+
+}).catch(()=>{document.body.insertAdjacentHTML("afterbegin","<p style=\"padding:24px\">Could not load content/site.json. Open the site through a web server or Vercel, not as a local file.</p>")});
+</script>
+</body>
+</html>
